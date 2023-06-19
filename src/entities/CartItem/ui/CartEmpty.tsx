@@ -1,6 +1,6 @@
 import React from 'react';
 
-import cartEmptyImg from 'public/img/empty-cart.png';
+import cartEmptyImg from '../../../../public/img/empty-cart.png';
 import Link from "next/link";
 import Image from "next/image";
 

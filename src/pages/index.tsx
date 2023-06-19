@@ -5,12 +5,12 @@ import {useAppDispatch} from "app/redux/store";
 import {selectFilter} from "app/redux/filter/selectors";
 import {selectPizzaData} from "app/redux/pizza/selectors";
 import {setCategoryId, setCurrentPage} from "app/redux/filter/slice";
-import {PizzaBlock} from "components/PizzaBlock";
-import {Categories} from "components/Categories";
-import {Sort} from "components/Sort";
-import {Pagination} from "components/Pagination";
+import {PizzaBlock} from "entities/CatalogItem/ui";
 import {fetchPizzas} from "app/redux/pizza/fetchPizzas";
-import Skeleton from "components/PizzaBlock/Skeleton";
+import {Pagination} from "shared/ui";
+import {Sort} from "features/Sort";
+import {Categories} from "features/Categories";
+import {Skeleton} from "entities/CatalogItem";
 
 const Home: NextPage = () => {
     const dispatch = useAppDispatch();

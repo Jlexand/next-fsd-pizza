@@ -1,5 +1,5 @@
 import React from 'react';
-import {NotFoundBlock} from "../components";
+import {NotFoundBlock} from "shared/ui";
 
 const NotFound: React.FC = () => <NotFoundBlock />;
 
