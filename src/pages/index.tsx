@@ -1,15 +1,15 @@
 import type { NextPage } from 'next'
 import React from "react";
 import {useSelector} from "react-redux";
-import {useAppDispatch} from "app/redux/store";
-import {selectFilter} from "app/redux/filter/selectors";
-import {selectPizzaData} from "app/redux/pizza/selectors";
-import {setCategoryId, setCurrentPage} from "app/redux/filter/slice";
+import {useAppDispatch} from "app/store/store";
+import {selectFilter} from "features/filtres/model/selectors";
+import {selectPizzaData} from "entities/CatalogItem/model/selectors";
+import {setCategoryId, setCurrentPage} from "features/filtres/model/slice";
 import {PizzaBlock} from "entities/CatalogItem/ui";
-import {fetchPizzas} from "app/redux/pizza/fetchPizzas";
+import {fetchPizzas} from "entities/CatalogItem/model/fetchPizzas";
 import {Pagination} from "shared/ui";
-import {Sort} from "features/Sort";
-import {Categories} from "features/Categories";
+import {Sort} from "features/filtres/ui/Sort";
+import {Categories} from "features/filtres/ui/Categories";
 import {Skeleton} from "entities/CatalogItem";
 
 const Home: NextPage = () => {

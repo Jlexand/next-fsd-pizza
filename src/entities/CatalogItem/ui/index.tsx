@@ -1,9 +1,10 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import {selectCartItemById} from "app/redux/cart/selectors";
-import {CartItem} from "app/redux/cart/types";
-import {addItem} from "app/redux/cart/slice";
+import {selectCartItemById} from "entities/CartItem/model/selectors";
+import {CartItem} from "entities/CartItem/model/types";
+import {addItem} from "entities/CartItem/model/slice";
 import Link from "next/link";
+import './styles.scss'
 
 const typeNames = ['тонкое', 'традиционное'];
 

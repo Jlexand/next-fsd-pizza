@@ -1,8 +1,8 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import {selectCart} from "app/redux/cart/selectors";
-import {clearItems} from "app/redux/cart/slice";
+import {selectCart} from "entities/CartItem/model/selectors";
+import {clearItems} from "entities/CartItem/model/slice";
 import Link from "next/link";
 import {CartEmpty, CartItem} from "entities/CartItem";
 
