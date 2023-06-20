@@ -1,5 +1,5 @@
 import {createAsyncThunk} from "@reduxjs/toolkit";
-import {Pizza, SearchPizzaParams} from "./types";
+import {Pizza, SearchPizzaParams} from "../../../shared/api/Catalog/types";
 import axios from "axios";
 import pickBy from "lodash/pickBy";
 import identity from "lodash/identity";
