@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {selectCartItemById} from "entities/CartItem/model/selectors";
-import {CartItem} from "shared/api/Cart/types";
+import {CartItem} from "shared/api/cart/types";
 import {addItem} from "entities/CartItem/model/slice";
 import Link from "next/link";
 import './styles.scss'

@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { Pizza, PizzaSliceState, Status } from '../../../shared/api/Catalog/types';
+import { Pizza, PizzaSliceState, Status } from 'shared/api/catalog/types';
 import {fetchPizzas} from "./fetchPizzas";
 
 const initialState: PizzaSliceState = {

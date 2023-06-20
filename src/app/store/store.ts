@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import filter from 'features/filtres/model/slice';
+import filter from 'shared/api/filters/slice';
 import cart from 'entities/CartItem/model/slice';
 import pizza from 'entities/CatalogItem/model/slice';
 import { useDispatch } from 'react-redux';

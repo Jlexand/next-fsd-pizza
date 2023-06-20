@@ -1,4 +1,4 @@
-import { CartItem } from '../api/Cart/types';
+import { CartItem } from 'shared/api/cart/types';
 
 export const calcTotalPrice = (items: CartItem[]) => {
   return items.reduce((sum, obj) => obj.price * obj.count + sum, 0);

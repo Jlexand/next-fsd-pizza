@@ -1,4 +1,4 @@
-import {CartItem} from "shared/api/Cart/types";
+import {CartItem} from "shared/api/cart/types";
 
 export const selectCart = (state: RootState) => state.cart;
 

@@ -1,17 +1,13 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import {SortPropertyEnum, Sort as SortType} from "features/filtres/model/types";
-import {setSort} from "features/filtres/model/slice";
+import {SortPropertyEnum, Sort as SortType} from "shared/api/filters/types";
+import {setSort} from "shared/api/filters/slice";
 import './styles.scss'
 
 type SortItem = {
   name: string;
   sortProperty: SortPropertyEnum;
 };
-
-// type PopupClick = MouseEvent & {
-//   path: Node[];
-// };
 
 type SortPopupProps = {
   value: SortType;

@@ -1,4 +1,4 @@
-import { CartItem } from '../api/Cart/types';
+import { CartItem } from 'shared/api/cart/types';
 import { calcTotalPrice } from './calcTotalPrice';
 
 export const getCartFromLS = () => {

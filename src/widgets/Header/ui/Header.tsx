@@ -6,7 +6,7 @@ import Link from "next/link";
 import {FC, useEffect, useRef} from "react";
 import {useRouter} from "next/router";
 import Image from "next/image";
-import {Search} from "features/filtres/ui/Search";
+import {Search} from "features/Search";
 import {selectCart} from "entities/CartItem/model/selectors";
 import logoSvg from 'public/img/pizza-logo.svg'
 
