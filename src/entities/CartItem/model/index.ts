@@ -1,3 +1,2 @@
-export * from './slice';
-export * from './selectors';
-export * from 'shared/api/cart/types';
+export {selectCartItemById} from './selectors';
+export * from './slice'

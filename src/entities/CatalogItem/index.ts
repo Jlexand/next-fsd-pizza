@@ -1,4 +1,3 @@
-export {PizzaBlock} from "./ui";
-import Skeleton from "./ui/Skeleton";
+export * from './model'
+export * from "./ui";
 
-export {Skeleton}

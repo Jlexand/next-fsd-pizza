@@ -1,14 +1,13 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import {selectCartItemById} from "entities/CartItem/model/selectors";
-import {CartItem} from "shared/api/cart/types";
-import {addItem} from "entities/CartItem/model/slice";
 import Link from "next/link";
 import './styles.scss'
+import {addItem, selectCartItemById} from "entities/CartItem";
+import {CartItem} from "shared/api";
 
 const typeNames = ['тонкое', 'традиционное'];
 
-type PizzaBlockProps = {
+export type PizzaBlockProps = {
   id: string;
   title: string;
   price: number;

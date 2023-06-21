@@ -1,18 +1,24 @@
 import React from 'react';
 import './styles.scss'
+import {setCategoryId} from "shared/api/filters/slice";
+import {useAppDispatch} from "app/store/store";
 
 type CategoriesProps = {
   value: number;
-  onChangeCategory: (idx: number) => void;
+  categoryList: string[]
 };
 
-const index = ['Все', 'Мясные', 'Вегетарианская', 'Гриль', 'Острые', 'Закрытые'];
+export const Categories: React.FC<CategoriesProps> = React.memo(({ value, categoryList }) => {
+    const dispatch = useAppDispatch();
 
-export const Categories: React.FC<CategoriesProps> = React.memo(({ value, onChangeCategory }) => {
-  return (
+    const onChangeCategory = React.useCallback((idx: number) => {
+        dispatch(setCategoryId(idx));
+    }, []);
+
+    return (
     <div className="categories">
       <ul>
-        {index.map((categoryName, i) => (
+        {categoryList.map((categoryName, i) => (
           <li key={i} onClick={() => onChangeCategory(i)} className={value === i ? 'active' : ''}>
             {categoryName}
           </li>
