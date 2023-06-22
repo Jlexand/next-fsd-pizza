@@ -18,6 +18,6 @@ export const store = makeStore();
 
 export type RootState = ReturnType<typeof store.getState>;
 
-type AppDispatch = typeof store.dispatch;
+export type AppDispatch = typeof store.dispatch;
 
 export const useAppDispatch = () => useDispatch<AppDispatch>();
