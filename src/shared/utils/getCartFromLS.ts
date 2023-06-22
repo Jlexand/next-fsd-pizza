@@ -1,5 +1,5 @@
-import { CartItem } from 'shared/api/cart/types';
 import { calcTotalPrice } from './calcTotalPrice';
+import {CartItem} from "../api";
 
 export const getCartFromLS = () => {
   // const data = localStorage.getItem('cart');

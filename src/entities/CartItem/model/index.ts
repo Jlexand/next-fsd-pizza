@@ -1,2 +1,2 @@
-export {selectCartItemById} from './selectors';
+export {selectCartItemById, selectCart} from './selectors';
 export * from './slice'

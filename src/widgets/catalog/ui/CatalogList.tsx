@@ -1,11 +1,9 @@
 import React, {FC} from "react";
 import {useSelector} from "react-redux";
-import {useAppDispatch} from "app/store/store";
 import {Pagination} from "shared/ui";
-import {fetchPizzas, PizzaBlock, selectPizzaData} from "entities/CatalogItem";
-import {selectFilter, setCategoryId, setCurrentPage} from "shared/api";
-import {PizzaBlockProps} from "entities/CatalogItem/ui/CatalogBlock";
-import Skeleton from "entities/CatalogItem/ui/Skeleton";
+import {fetchPizzas, PizzaBlock, PizzaBlockProps, selectPizzaData, Skeleton} from "entities/CatalogItem";
+import {useAppDispatch} from "app/store";
+import {selectFilter, setCategoryId, setCurrentPage} from "entities/Filters";
 
 export const CatalogList: FC = () => {
     const dispatch = useAppDispatch();

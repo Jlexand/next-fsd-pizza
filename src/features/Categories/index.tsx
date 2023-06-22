@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles.scss'
-import {setCategoryId} from "shared/api/filters/slice";
-import {useAppDispatch} from "app/store/store";
+import {setCategoryId} from "entities/Filters";
+import {useAppDispatch} from "app/store";
 
 type CategoriesProps = {
   value: number;

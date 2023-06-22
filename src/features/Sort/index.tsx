@@ -1,8 +1,8 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import {SortPropertyEnum, Sort as SortType} from "shared/api/filters/types";
-import {setSort} from "shared/api/filters/slice";
 import './styles.scss'
+import {setSort} from "entities/Filters";
+import {SortPropertyEnum, Sort as SortType} from "shared/api";
 
 type SortItem = {
   name: string;

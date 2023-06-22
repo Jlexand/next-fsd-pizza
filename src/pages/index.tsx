@@ -5,7 +5,7 @@ import {Sort} from "features/Sort";
 import {Categories} from "features/Categories";
 import {categoryList} from "entities/Categories";
 import {CatalogList} from "widgets/catalog";
-import {selectFilter} from "shared/api";
+import {selectFilter} from "entities/Filters";
 
 const Home: NextPage = () => {
     const { categoryId, sort } = useSelector(selectFilter);
