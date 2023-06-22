@@ -5,7 +5,7 @@ import {Sort} from "features/Sort";
 import {Categories} from "features/Categories";
 import {categoryList} from "entities/Categories";
 import {selectFilter} from "entities/Filters";
-import {CatalogList} from "entities/CatalogList";
+import {Catalog} from "widgets/Catalog";
 
 const Home: NextPage = () => {
     const { categoryId, sort } = useSelector(selectFilter);
@@ -17,7 +17,7 @@ const Home: NextPage = () => {
                 <Sort value={sort} />
             </div>
             <h2 className="content__title">Все пиццы</h2>
-            <CatalogList/>
+            <Catalog/>
         </div>
     );
 };

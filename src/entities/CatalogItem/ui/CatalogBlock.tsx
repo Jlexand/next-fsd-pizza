@@ -32,17 +32,14 @@ export const PizzaBlock: React.FC<PizzaBlockProps> = ({
 
   const addedCount = cartItem ? cartItem.count : 0;
 
-  const onClickAdd = () => {
-    const item: CartItem = {
-      id,
-      title,
-      price,
-      imageUrl,
-      type: typeNames[activeType],
-      size: sizes[activeSize],
-      count: 0,
-    };
-    dispatch(addItem(item));
+  const item: CartItem = {
+    id,
+    title,
+    price,
+    imageUrl,
+    type: typeNames[activeType],
+    size: sizes[activeSize],
+    count: 0,
   };
 
   return (
@@ -76,7 +73,7 @@ export const PizzaBlock: React.FC<PizzaBlockProps> = ({
         </div>
         <div className="pizza-block__bottom">
           <div className="pizza-block__price">от {price} ₽</div>
-          <button onClick={onClickAdd} className="button button--outline button--add">
+          <button onClick={()=> dispatch(addItem(item))} className="button button--outline button--add">
             <svg
               width="12"
               height="12"
