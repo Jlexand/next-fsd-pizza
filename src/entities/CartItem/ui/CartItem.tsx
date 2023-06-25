@@ -1,6 +1,6 @@
 import React from 'react';
 import {useDispatch} from 'react-redux';
-import {onClickCartProps} from "features/Cart/model/onClickPlus";
+import {onClickCartProps} from "features/Cart";
 
 type CartItemProps = {
   id: string;
