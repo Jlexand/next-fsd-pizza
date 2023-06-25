@@ -4,6 +4,7 @@ import Link from "next/link";
 import './styles.scss'
 import {addItem, selectCartItemById} from "entities/CartItem";
 import {CartItem} from "shared/api";
+import {updateActiveItem} from "entities/CatalogItem";
 
 const typeNames = ['тонкое', 'традиционное'];
 
@@ -45,7 +46,7 @@ export const PizzaBlock: React.FC<PizzaBlockProps> = ({
   return (
     <div className="pizza-block-wrapper">
       <div className="pizza-block">
-        <Link key={id} href={`/pizzas/${id}`}>
+        <Link key={id} href={`/pizzas/${id}`} onClick={() => dispatch(updateActiveItem(id))}>
           <img className="pizza-block__image" src={imageUrl} alt="Id" />
           <h4 className="pizza-block__title">{title}</h4>
         </Link>

@@ -1,9 +1,10 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { Pizza, PizzaSliceState, Status } from 'shared/api/catalog/types';
 import {fetchPizzas} from "./fetchPizzas";
+import {Pizza, PizzaSliceState, Status} from "shared/api";
 
 const initialState: PizzaSliceState = {
   items: [],
+  activeItem: '',
   status: Status.LOADING, // loading | success | error
 };
 
@@ -14,6 +15,9 @@ const pizzaSlice = createSlice({
     setItems(state, action: PayloadAction<Pizza[]>) {
       state.items = action.payload;
     },
+    updateActiveItem(state, action) {
+      state.activeItem = String(action.payload);
+    }
   },
   extraReducers: (builder) => {
     builder.addCase(fetchPizzas.pending, (state, action) => {
@@ -33,6 +37,6 @@ const pizzaSlice = createSlice({
   },
 });
 
-export const { setItems } = pizzaSlice.actions;
+export const { setItems, updateActiveItem } = pizzaSlice.actions;
 
-export default pizzaSlice.reducer;
+export const pizza = pizzaSlice.reducer;
