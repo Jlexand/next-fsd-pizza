@@ -1,12 +1,12 @@
 import {createAsyncThunk} from "@reduxjs/toolkit";
-import {Pizza, SearchPizzaParams} from "shared/api/catalog/types";
-import {getCatalog} from "shared/api/catalog/catalog";
+import {Pizza, SearchPizzaParams} from "shared/api";
+import {catalog} from "shared/api";
 
 export const fetchPizzas = createAsyncThunk<Pizza[], SearchPizzaParams>(
     'pizza/fetchPizzasStatus',
     async (params) => {
         const {sortBy, order, category, search, currentPage} = params;
-        const { data } = await getCatalog(
+        const { data } = await catalog.getCatalog(
             {
                 page: currentPage,
                 limit: 4,
