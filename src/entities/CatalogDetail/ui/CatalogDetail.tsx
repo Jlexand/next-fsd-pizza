@@ -15,7 +15,7 @@ export type pizzaProp = {
 }
 
 export const CatalogDetail: FC = () => {
-    const {pizza} = useSelector(pizzaDetailSlice);
+    const { pizza } = useSelector(pizzaDetailSlice);
 
     return (
         <div className="container">

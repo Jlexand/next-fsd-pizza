@@ -27,3 +27,5 @@ export interface PizzaSliceState {
   status: Status;
   activeItem: string
 }
+
+export type AsyncThunkConfig = any

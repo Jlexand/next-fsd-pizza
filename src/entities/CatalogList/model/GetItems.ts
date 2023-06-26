@@ -1,6 +1,6 @@
-import {Sort} from "shared/api";
+import {AsyncThunkConfig, Pizza, SearchPizzaParams, Sort} from "shared/api";
 import {AppDispatch} from "app/store";
-import {fetchPizzas} from "entities/CatalogItem";
+import {AsyncThunk} from "@reduxjs/toolkit";
 
 
 
@@ -10,6 +10,7 @@ export const getPizzas = async (
     searchValue: string,
     currentPage: number,
     dispatch: AppDispatch,
+    fetchPizzas:  AsyncThunk<Pizza[], SearchPizzaParams, AsyncThunkConfig>
 ) => {
     const sortBy = sort.sortProperty.replace('-', '');
     const order = sort.sortProperty.includes('-') ? 'asc' : 'desc';

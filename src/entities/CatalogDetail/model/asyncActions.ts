@@ -1,10 +1,11 @@
 import {createAsyncThunk} from "@reduxjs/toolkit";
+import {getProduct} from "shared/api/catalog/catalogDetail";
 
-export const fetchPizzaDetail = createAsyncThunk(
+export const fetchPizzaDetail = createAsyncThunk<object, string>(
     'pizza/fetchPizzaDetail',
-    async (id: string) => {
-        const response = await fetch('https://648f77e375a96b66444529a0.mockapi.io/pizzas?id=' + id);
-        let data =  await response.json();
+    async (id) => {
+        const response = await getProduct({id});
+        let data =  await response.data;
 
         if (!data || !data.length) {
             return {
